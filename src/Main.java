@@ -5,11 +5,11 @@ import java.awt.event.ActionListener;
 
 public class Main extends JFrame {
 
-    // 🌱 Nodo del árbol
+    //  Nodo del árbol
     static class Node {
-        int value;
-        Node left, right;
-        Node(int value) { this.value = value; }
+        int value; //nos guarda el valor del nodo
+        Node left, right; // nos referencia los hijos del nodo izquierda y derecha
+        Node(int value) { this.value = value; } //inicia el nodo con un valor que le demos
     }
 
     // 🌲 Clase árbol binario
