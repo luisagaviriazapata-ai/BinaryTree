@@ -5,14 +5,14 @@ import java.awt.event.ActionListener;
 
 public class Main extends JFrame {
 
-    // 🌱 Nodo del árbol
+    // Nodo principal del árbol
     static class Node {
         int value;
         Node left, right;
         Node(int value) { this.value = value; }
     }
 
-    // 🌲 Clase árbol binario
+    // clase del arbol
     static class BinaryTree {
         Node root;
 
@@ -38,7 +38,7 @@ public class Main extends JFrame {
         }
     }
 
-    // 🎨 Panel que dibuja el árbol
+    // panel del árbol
     static class TreePanel extends JPanel {
         private Node root;
 
@@ -59,7 +59,7 @@ public class Main extends JFrame {
             }
         }
 
-        // Método recursivo para dibujar el árbol
+        // Método de dbiujo del arbol
         private void drawTree(Graphics g, Node node, int x, int y, int offset) {
             if (node == null) return;
 
@@ -71,7 +71,7 @@ public class Main extends JFrame {
                 g.drawLine(x, y, x + offset, y + 80);
             }
 
-            // 🌟 Nodo redondo con color y texto centrado
+            // color del nodo
             g.setColor(new Color(135, 206, 250));
             g.fillOval(x - 25, y - 25, 50, 50);
             g.setColor(Color.BLACK);
@@ -89,20 +89,20 @@ public class Main extends JFrame {
         }
     }
 
-    // 🧩 Componentes principales
+    // componentes principales
     private BinaryTree tree = new BinaryTree();
     private TreePanel treePanel = new TreePanel();
     private JTextField inputField = new JTextField(10);
 
-    // 🖼️ Constructor con la interfaz
+    //  Constructor con la interfaz
     public Main() {
-        setTitle("🌳 Visualizador de Árbol Binario");
+        setTitle("Visualizador de Árbol Binario");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(950, 700);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // 🔝 Panel superior (título + controles)
+        // Panel superior (título + controles)
         JPanel controlPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         controlPanel.setBackground(new Color(220, 240, 255));
 
@@ -116,14 +116,14 @@ public class Main extends JFrame {
         JButton insertButton = new JButton("➕ Insertar");
         JButton searchButton = new JButton("🔍 Buscar");
 
-        // 🎨 Estilo de botones
+        //  Estilo de botones
         Font btnFont = new Font("Segoe UI", Font.BOLD, 15);
         insertButton.setFont(btnFont);
         searchButton.setFont(btnFont);
         insertButton.setBackground(new Color(144, 238, 144));
         searchButton.setBackground(new Color(255, 218, 185));
 
-        // ➕ Añadir componentes al panel
+        //  Añadir componentes al panel
         controlPanel.add(titleLabel);
         controlPanel.add(label);
         controlPanel.add(inputField);
@@ -132,12 +132,12 @@ public class Main extends JFrame {
 
         add(controlPanel, BorderLayout.NORTH);
 
-        // 📜 Panel con scroll para el árbol
+        //  Panel con scroll para el árbol
         JScrollPane scrollPane = new JScrollPane(treePanel);
         scrollPane.setPreferredSize(new Dimension(900, 550));
         add(scrollPane, BorderLayout.CENTER);
 
-        // 📌 Eventos de botones
+        //  Eventos de botones
         insertButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -147,7 +147,7 @@ public class Main extends JFrame {
                     treePanel.setRoot(tree.root);
                     inputField.setText("");
                 } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(null, "⚠️ Ingrese un número válido.");
+                    JOptionPane.showMessageDialog(null, " Ingrese un número válido.");
                 }
             }
         });
@@ -162,13 +162,13 @@ public class Main extends JFrame {
                             found ? "✅ El número " + num + " está en el árbol." :
                                     "❌ El número " + num + " NO está en el árbol.");
                 } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(null, "⚠️ Ingrese un número válido.");
+                    JOptionPane.showMessageDialog(null, " Ingrese un número válido.");
                 }
             }
         });
     }
 
-    // ▶️ Método principal
+    //  Método principal
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             Main frame = new Main();
