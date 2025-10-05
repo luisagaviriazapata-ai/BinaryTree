@@ -40,6 +40,49 @@ Su propósito es **visualizar y gestionar un árbol binario de búsqueda (Binary
 - **Bibliotecas:** Swing y AWT
 - **Características:** interfaz visual, dibujo recursivo y manejo de eventos.
 
+## Ejemplo de ejecución
+
+A continuación se muestra un ejemplo visual del funcionamiento del programa paso a paso:
+
+### 1. Inserción de un número
+Se ingresa un número en el campo de texto y se presiona el botón **“Insertar”**.
+
+![Inserción de número](./image/01.jpg)
+
+---
+
+### 2. Número agregado al árbol
+El número ingresado aparece representado como un **nodo en el árbol binario**.
+
+![Número agregado al árbol](./image/02.jpg)
+
+---
+
+### 3. Inserción de más números
+Se agregan más valores y el árbol se **actualiza visualmente** mostrando la estructura generada.
+
+![Más números agregados](./image/03.jpg)
+
+---
+
+### 4. Búsqueda de un número existente
+Se ingresa un número y se presiona el botón **“Buscar”** para verificar si está en el árbol.
+
+![Inicio de búsqueda](./image/04.jpg)
+
+---
+
+### 5. Resultado de búsqueda exitosa
+El sistema muestra un mensaje indicando que el número **sí se encuentra** en el árbol.
+
+![Número encontrado](./image/05.jpg)
+
+---
+
+### 6. Búsqueda de un número inexistente
+Al buscar un número que **no está presente**, se muestra un mensaje indicando que **no fue encontrado**.
+
+![Número no encontrado](./image/06.jpg)
 
 
 ## Contribuyentes
